@@ -6,7 +6,7 @@ def ReadRegistryValue(KeyName, ValueName):
     try:
         openKey = _winreg.OpenKey(_winreg.HKEY_CURRENT_USER, KeyName)
         path, type = _winreg.QueryValueEx(openKey, ValueName)
-        print path, type
+        # print path, type
         return path
     except WindowsError, ex:
         print "Read RegistryValue Failed " ,ex
