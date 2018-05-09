@@ -42,7 +42,7 @@ def copyFile(srcFile, dstFile):
     print srcFile + " copy completed!"
 
 def copyDir(srcDir, dstDir):
-    if not os.path.exists(srcDir):
+    if not os.path.exists(dstDir):
         shutil.copytree(srcDir, dstDir)
     # 若文件夹存在，判断目的文件与源文件修改时间是否一致，若不同删除目的文件
     elif os.path.exists(dstDir) and (os.path.getmtime(dstDir) != os.path.getmtime(srcDir)):
