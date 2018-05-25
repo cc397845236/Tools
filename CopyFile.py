@@ -39,7 +39,7 @@ def copyFile(srcFile, dstFile):
         shutil.copyfile(srcFile, dstFile)
     else:
         print ("File already existed and was latest!")
-    print (srcFile + " copy completed!")
+    print (srcFile + " to " + dstFile + " copy completed!")
 
 def copyDir(srcDir, dstDir):
     if not os.path.exists(dstDir):
@@ -52,7 +52,7 @@ def copyDir(srcDir, dstDir):
         shutil.copytree(srcDir, dstDir)
     else:
         print ("Fold already existed and was latest!")
-    print (srcDir + " copy completed!")
+    print (srcDir + "to" + dstDir + " copy completed!")
 
 if __name__ == '__main__':
     CopyFilesFunc(sys.argv[1], sys.argv[2])
