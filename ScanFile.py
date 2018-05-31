@@ -9,7 +9,7 @@ def FullScan(filename):
             # print (a,b,c)
             if filename in c:
                 filepath.append(a)
-    print("Scan results: ", filepath)
+    print("Scan Completed! Scan results: ", filepath)
     return filepath
 
 def getdisks():
