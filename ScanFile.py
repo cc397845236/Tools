@@ -2,8 +2,6 @@ import os
 import psutil
 
 def FullScan(filename):
-    PathLine = os.sep
-    print (PathLine)
     filepath = []
     for dir in getdisks():
         print ("Begin to scan " + dir + " , Please wait!")
@@ -11,6 +9,7 @@ def FullScan(filename):
             # print (a,b,c)
             if filename in c:
                 filepath.append(a)
+    print("Scan results: ", filepath)
     return filepath
 
 def getdisks():
